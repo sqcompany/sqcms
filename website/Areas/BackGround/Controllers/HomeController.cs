@@ -9,7 +9,7 @@ namespace website.Areas.BackGround.Controllers
     public class HomeController : Controller
     {
         //
-        // GET: /Admin/Home/
+        // GET: /BackGround/Home/
 
         public ActionResult Index()
         {

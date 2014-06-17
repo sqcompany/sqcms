@@ -6,17 +6,21 @@
     <title>@ViewBag.Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href=@Url.Content("~/Content/_bcss/bootstrap.min.css") />
+    <link rel="stylesheet" href=@Url.Content("~/Content/_bcss/bootstrap-responsive.min.css") />
+    <link rel="stylesheet" href=@Url.Content("~/Content/_bcss/fullcalendar.css") />
+    <link rel="stylesheet" href=@Url.Content("~/Content/_bcss/matrix-style.css") />
+    <link rel="stylesheet" href=@Url.Content("~/Content/_bcss/matrix-media.css") />
+    <link rel="stylesheet" href=@Url.Content("~/Content/font-awesome/css/font-awesome.css") />
+    <link rel="stylesheet" href=@Url.Content("~/Content/_bcss/jquery.gritter.css") />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
-
 </head>
 <body>
     <!--Header-part-->
     <div id="header">
         <h1><a href="dashboard.html">Matrix Admin</a></h1>
     </div>
-    <!--close-Header-part--> 
+    <!--close-Header-part-->
     <!--top-Header-menu-->
     <div id="user-nav" class="navbar navbar-inverse">
         <ul class="nav">
@@ -110,12 +114,36 @@
         </ul>
     </div>
     <!--sidebar-menu-->
-    <div>
-        @RenderBody()
+    <div id="content">
+        <!--breadcrumbs-->
+        <div id="content-header">
+            <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a></div>
+        </div>
+        <!--End-breadcrumbs-->
+        <div class="container-fluid">
+            @RenderBody()
+        </div>
     </div>
     <div class="row-fluid">
         <div id="footer" class="span12"> 2013 &copy; Matrix Admin. Brought to you by <a href="http://themedesigner.in/">Themedesigner.in</a> </div>
     </div>
+    <script src="~/Scripts/excanvas.min.js"></script>
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/jquery.ui.custom.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.peity.min.js"></script>
+    <script src="~/Scripts/fullcalendar.min.js"></script>
+    <script src="~/Scripts/matrix.js"></script>
+    <script src="~/Scripts/jquery.gritter.min.js"></script>
+    <script src="~/Scripts/matrix.interface.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/matrix.form_validation.js"></script>
+    <script src="~/Scripts/jquery.wizard.js"></script>
+    <script src="~/Scripts/jquery.uniform.js"></script>
+    <script src="~/Scripts/select2.min.js"></script>
+    <script src="~/Scripts/matrix.popover.js"></script>
+    <script src="~/Scripts/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/matrix.tables.js"></script>
     <script type="text/javascript">
         // This function is called from the pop-up menus to transfer to
         // a different page. Ignore if the value returned is a null string:
